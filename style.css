@@ -1,0 +1,275 @@
+body {
+    background:rgb(224, 224, 224);
+    height:1075px;
+    margin:0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+nav {
+    background:linear-gradient(to right,rgb(14, 53, 138),rgb(12, 126, 255));
+    display: inline-block;
+    width:100%;
+    height:70px;
+    vertical-align: baseline;
+    color:white;
+    font-size:23px;
+}
+
+
+nav button {
+    font-size: 35px;
+    color:white;
+    float:  left;
+    padding:20px;
+    margin-top:-10px;
+    height:60px;
+    margin-right:20px;
+    border:hidden;
+    background: transparent;
+    cursor: pointer;
+    transition:all 0.5s;
+    outline:hidden;
+    outline-color:rgb(14, 53, 138);
+}
+
+nav button:focus{
+    outline:none;
+}
+nav button:hover{
+    transform:scale(1.15);
+}
+nav p {
+    position: absolute;
+    left: 40%;
+    font-size:30px;
+    top:-15px;
+}
+
+
+.side-nav {
+    height: 100%;
+    width:0px;
+    position: fixed;
+    z-index: 1;
+    top:0;
+    left:0;
+    background-color: rgb(14, 53, 138);
+    overflow-x:hidden;
+    transition:0.5s;
+    padding-top:70px;
+    outline:none;
+}
+
+.side-nav a{
+    padding:8px 8px 8px 2px;
+    text-decoration: none;
+    font-size:24px;
+    color:#818181;
+    display:block;
+    transition:0.3s;
+    border-bottom:1px solid white;
+}
+
+.side-nav a:hover{
+    color:#f1f1f1;
+}
+
+.side-nav .closebtn{
+    position: absolute;
+    top:0;
+    right:25px;
+    font-size:36px;
+    margin-left:50px;
+    border:hidden;
+}
+@media screen and (max-height:450px){
+    .side-nav{padding-top:15px;}
+    .side-nav a{font-size:18px;}
+}
+
+.loader {
+    margin-top:200px;
+    border:2px solid #f3f3f3;
+    border-radius: 50%;
+    border-top:2px solid #3498db;
+    width:60px;
+    height:60px;
+    box-shadow:0px 0px 6px 2px white;
+    -webkit-animation: spin 2s linear infinite; /*safari*/
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+.summary-data {
+    margin-top:100px;
+    background:#fff;
+    height:500px;
+    width:600px;
+    box-shadow: 0px 0px 13px 3px grey;
+    transition:all 1s;
+}
+.summary-data p {
+    opacity: 0.6;
+    font:600 1.3em "Raleway",sans-seriff;
+}
+.cases, .deaths, .recovered{
+    opacity: 0.8;
+    font:500 1.4em "Raleway",sans-seriff;
+}
+.deaths {
+    color:red;
+}
+.recovered {
+    color:green;
+}
+
+.head {
+    color:rgb(16,17, 22);
+    font-size: 30px;
+    padding-top:40px;
+}
+
+
+@media screen and (max-width:600px)
+{
+
+    .summary-data {
+        margin-top:100px;
+        background:#fff;
+        height:500px;
+        width:600px;
+        box-shadow: 0px 0px 13px 3px grey;
+    }
+
+    nav {
+        width:600px;
+    }
+    nav p{
+        width:250px;
+        font-size:20px;
+        margin-top:30px;
+    }
+}
+
+@media screen  and (max-width:380px){
+    body{
+        background: white;
+    }
+    nav p {
+        margin-top:20px;
+        font-size:20px;
+    }
+    .summary-data {
+        width:375px;
+    }
+}
+
+
+#lastUpdated {
+    margin-top:100px;
+    text-align: center;
+    font:300 2em "Raleway",sans-seriff;
+}
+
+table {
+
+    background:white;
+    border-collapse: collapse;
+    border:hidden;
+    border-radius: 1em;
+    box-shadow:0px 0px 13px 4px grey;
+    width:900px;
+    scrollbar-width: 10px;
+}
+
+th {
+    background: rgb(13,89,191);
+    padding: 10px;
+    color:white;
+    font:200 1.3em "Raleway",sans-seriff;
+}
+td {
+    text-align: center;
+    font:300 1em "Raleway",sans-seriff;
+    opacity:0.7;
+    padding:10px;
+}
+td:nth-child(3){
+    color:green;
+}
+td:nth-child(4){
+    color:red;
+}
+thead th:first-child {
+    border-radius: 10px 0px 0px 0px;
+}
+thead th:last-child {
+    border-radius:0px 10px 0px 0px;
+}
+tr:nth-child(even){
+    background:#ddd;
+}
+tr:last-child{
+    border-radius: 10px;
+}
+
+thead tr {
+    width:100% !important;
+}
+tr {
+    transition:all 1s;
+}
+
+
+@media screen and (max-width:450px)
+{
+    table {
+        width:375;
+        font-size: 20px;
+    }
+
+    .summary-data {
+        width:375px;
+    }
+    nav p{
+        left:60px;
+        font-size:23px;
+        margin-top:36px;
+    }
+}
+
+@media screen and (max-width:414px)
+{
+    body{
+        width:416px;
+    }
+    table {
+        width:375px;
+        font-size:10px;
+    }
+}
+
+@media screen and (max-width:736px)
+{
+    nav {
+        width:736px;
+    }
+}
+
+@media screen and (max-width:375px)
+{
+    body {
+        width:375px;
+    }
+    
+    table{
+        width:375px;
+    }
+    .summary-data {
+        width:375px;
+    }
+}
